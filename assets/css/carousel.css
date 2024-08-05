@@ -1,0 +1,552 @@
+html {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.15;
+    scroll-behavior: smooth;
+}
+
+.section-title2 {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+
+
+    padding: 10px 20px;
+
+    border-radius: 5px;
+    font-size: 6em;
+    color: white;
+    /* Reemplaza con la ruta de tu imagen */
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-size: cover;
+}
+
+
+@media (max-width:786px) {
+    .section-title2 {
+        top: 55px;
+        font-size: 3em;
+        margin-bottom: -30px;
+    }
+
+    .testimonial-section {
+        margin-bottom: -30px;
+        height: 60vh;
+    }
+}
+
+.testimonial-section {
+ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+a {
+    text-decoration: none;
+}
+
+.container2 {
+    width: 100%;
+    height: 100%;
+    max-width: 600px;
+    max-height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    flex-direction: column;
+    margin-bottom: 180px;
+    margin-top: 50px;
+}
+
+.card2s {
+
+    position: relative;
+    height: 500px;
+    width: 430px;
+    margin-bottom: 20px;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.card2s label {
+    position: absolute;
+    width: 420px;
+
+    left: 0;
+    right: 0;
+    margin: auto;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+
+}
+
+.card2s .card2 {
+    position: relative;
+    height: 100%;
+
+    background-size: cover;
+    background-position: center;
+    /* Centra la imagen */
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    padding: 15px 0px;
+
+}
+
+.card2s .image {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.card2s .image img {
+
+    z-index: 2;
+    border-radius: 5px;
+    width: 80%;
+    margin: 0 auto;
+    height: 350px;
+    object-fit: cover;
+    transition: all 0.7s;
+    margin-right: 50px;
+}
+
+.card2s .image img:hover {
+    transform: scale(1.05);
+}
+
+.card2s .image .dots {
+    text-align: center;
+}
+
+.dots div {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.card2 .infos {
+    display: block;
+    text-align: end;
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+
+.card2 .infos span {
+    display: block;
+
+}
+
+.infos .name {
+    text-align: left;
+    font-size: 27px;
+    color: #ffffff;
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    transition: all 0.6s ease;
+}
+
+.card2 .lorem {
+    text-align: left;
+    font-size: 11.5px;
+    color: #eceaed;
+    margin: 0 auto;
+}
+
+
+.card2 .actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.actions:hover i {
+    transform: scale(1.3);
+}
+
+/* Style for hiding text initially */
+.infos {
+    opacity: 0.1;
+    transition: opacity 0.5s ease;
+}
+
+/* Make text fully opaque when its input is checked */
+#s1:checked~.card2s label[for="s1"] .infos,
+#s2:checked~.card2s label[for="s2"] .infos,
+#s3:checked~.card2s label[for="s3"] .infos,
+#s4:checked~.card2s label[for="s4"] .infos,
+#s5:checked~.card2s label[for="s5"] .infos {
+    opacity: 1;
+}
+
+/* Imágenes no seleccionadas */
+#s1:checked~.card2s #slide4,
+#s2:checked~.card2s #slide5,
+#s3:checked~.card2s #slide1,
+#s4:checked~.card2s #slide2,
+#s5:checked~.card2s #slide3,
+#s1:checked~.card2s #slide5,
+#s2:checked~.card2s #slide1,
+#s3:checked~.card2s #slide2,
+#s4:checked~.card2s #slide3,
+#s5:checked~.card2s #slide4,
+#s1:checked~.card2s #slide2,
+#s2:checked~.card2s #slide3,
+#s3:checked~.card2s #slide4,
+#s4:checked~.card2s #slide5,
+#s5:checked~.card2s #slide1,
+#s1:checked~.card2s #slide3,
+#s2:checked~.card2s #slide4,
+#s3:checked~.card2s #slide5,
+#s4:checked~.card2s #slide1,
+#s5:checked~.card2s #slide2 {
+    opacity: .5;
+    transform: scale(0.8) translate3d(-70%, 0, -220px);
+    --current-color1: #eceaed;
+    --current-color2: #404457;
+}
+
+#s1:checked~.card2s #slide5,
+#s2:checked~.card2s #slide1,
+#s3:checked~.card2s #slide2,
+#s4:checked~.card2s #slide3,
+#s5:checked~.card2s #slide4,
+#s1:checked~.card2s #slide2,
+#s2:checked~.card2s #slide3,
+#s3:checked~.card2s #slide4,
+#s4:checked~.card2s #slide5,
+#s5:checked~.card2s #slide1 {
+    opacity: .5;
+    transform: scale(0.8) translate3d(-35%, 0, -120px);
+    --current-color1: #eceaed;
+    --current-color2: #404457;
+}
+
+#s1:checked~.card2s #slide1,
+#s2:checked~.card2s #slide2,
+#s3:checked~.card2s #slide3,
+#s4:checked~.card2s #slide4,
+#s5:checked~.card2s #slide5 {
+    opacity: 1;
+    transform: scale(1) translate3d(0, 0, 0);
+    --current-color1: #fad00c;
+    --current-color2: #eceaed;
+}
+
+#s1:checked~.card2s #slide2,
+#s2:checked~.card2s #slide3,
+#s3:checked~.card2s #slide4,
+#s4:checked~.card2s #slide5,
+#s5:checked~.card2s #slide1 {
+    opacity: .5;
+    transform: scale(0.8) translate3d(35%, 0, -120px);
+    --current-color1: #eceaed;
+    --current-color2: #404457;
+}
+
+#s1:checked~.card2s #slide3,
+#s2:checked~.card2s #slide4,
+#s3:checked~.card2s #slide5,
+#s4:checked~.card2s #slide1,
+#s5:checked~.card2s #slide2 {
+    opacity: .5;
+    transform: scale(0.8) translate3d(70%, 0, -220px);
+    --current-color1: #eceaed;
+    --current-color2: #404457;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-20%);
+    background: rgba(0, 0, 0, 0);
+    text-shadow: 2px 1px 10px rgba(255, 255, 255, 0.5);
+    color: #fff;
+    border: none;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.carousel-control:hover {
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 1.5);
+}
+
+.prev {
+    left: 50px;
+}
+
+.next {
+    right: 50px;
+}
+
+/* Ocultar inputs */
+.carousel-inner input {
+    display: none;
+}
+
+@media (max-width: 786px) {
+    .card2 .infos span {
+        margin-left: 15px;
+    }
+
+    .card2s {
+        height: 200px;
+        /* Reducción de altura para pantallas pequeñas */
+        width: 200px;
+        /* Reducción de ancho para pantallas pequeñas */
+        margin-bottom: 20px;
+        perspective: 1000px;
+        transform-style: preserve-3d;
+    }
+
+    .card2s label {
+        width: 200px;
+        /* Ajuste de ancho para coincidir con la tarjeta */
+        left: 0;
+        right: 0;
+        margin: auto;
+        cursor: pointer;
+        transition: transform 0.5s ease;
+    }
+
+    .card2s .card2 {
+        height: 100%;
+        padding: 20px;
+        /* Ajuste de padding para pantallas pequeñas */
+    }
+
+    .card2s .image img {
+        width: 100%;
+        /* Ocupa todo el ancho disponible */
+        height: 150px;
+        /* Ajuste de altura proporcional */
+    }
+
+    .infos .name {
+        font-size: 12px;
+    }
+
+    .card2 .lorem {
+        font-size: 10px;
+    }
+
+    .card2 .infos {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .content2 .highlighted-text5 {
+        font-size: 19px;
+    }
+
+    .btn-details {
+        margin: 0 auto;
+    }
+
+    .highlighted-text5 {
+        font-size: 19px;
+    }
+}
+
+.product-details {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.product-details h2 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.product-details p {
+    margin: 10px 0;
+}
+
+.product-details .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #00aaff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.product-details .btn:hover {
+    background-color: #0077cc;
+}
+
+/* Estilo para la sección de información del producto */
+.infos {
+    background-color: #333;
+    border: 2px solid #0044cc;
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    /* Aumenta el ancho */
+    margin: 0 auto;
+    /* Centrar horizontalmente */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+.infos .description {
+    display: flex;
+    justify-content: space-between;
+    width: 700px;
+    margin-bottom: 20px;
+    /* Añadir espacio entre los párrafos y el botón */
+}
+
+.infos .name {
+    font-size: 20px;
+    /* Ajusta el tamaño de la tipografía */
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+
+
+.infos .lorem {
+    font-size: 14px;
+    /* Ajusta el tamaño de la tipografía */
+    width: 45%;
+}
+
+.tienda-virtual-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0044cc;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.tienda-virtual-btn:hover {
+    background-color: #003399;
+}
+
+.carousel-control.prev {
+    left: 100px;
+}
+
+.carousel-control.next {
+    right: 100px;
+}
+
+.carousel-inner .card2 .infos {
+    background-color: rgba(51, 51, 51, 0.9); /* Fondo semi-transparente */
+    border: 3px solid rgba(0, 68, 204, 0.9); /* Borde original */
+    border-radius: 30px; /* Bordes redondeados */
+    width: 700px; /* Ancho del elemento */
+    padding: 20px; /* Espaciado interno */
+    margin-top: -100px; /* Desplazamiento hacia arriba */
+    
+    /* Agrega un resplandor usando box-shadow */
+    box-shadow: 
+      0 0 10px rgba(0, 68, 204, 0.7),  /* Sombra cercana */
+      0 0 20px rgba(0, 68, 204, 0.5),  /* Sombra intermedia */
+      0 0 30px rgba(0, 68, 204, 0.3);  /* Sombra lejana */
+}
+
+@media (max-width:786px) {
+    .carousel-inner .card2 .infos {
+        margin-top: -20px;
+        width: 250px;
+    }
+    .carousel-control.prev {
+        left: 30px;
+    }
+    
+    .carousel-control.next {
+        right: 30px;
+    }
+}
+
+.carousel-inner .card2 .infos .tienda-virtual-btn {
+    display: block;
+    text-align: center;
+    margin: 10px auto 0;
+}
+
+.carousel-inner .card2 {
+    position: relative;
+}
+@media (max-width: 768px) {
+    .card2 .description {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .card2 .lorem {
+        width:200px;
+        margin-bottom: 10px; /* Añade espacio entre los párrafos */
+    }
+}
+.superposed-button2 .button-image {
+    width: 100%; /* Ajusta el ancho según necesites */
+    max-width: 150px; /* Define un tamaño máximo */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Asegura que la imagen ocupe todo el espacio del enlace */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+    transition: opacity 0.3s ease-in-out; /* Transición suave para el efecto hover */
+    position: relative;
+    z-index: 1;
+}
+
+/* Imagen de encendido que se mostrará al pasar el mouse */
+.superposed-button2:hover .button-image {
+    content: url('../img/Boton\ -\ Venta\ de\ equipos\ Encendido.png'); /* Cambia la imagen en hover */
+}
+.superposed-button2 {
+    position: absolute;
+    bottom: -75px;
+    /* Ajusta según sea necesario para que esté 50% dentro y 50% fuera */
+    left: 50%;
+    transform: translateX(-50%);
+   
+    /* Borde azul */
+    padding: 0.5rem 1.5rem;
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 1;
+ 
+
+
+}
+
+@media (max-width:786px) {
+    .superposed-button2 {
+        bottom: -260px;
+    }
+}

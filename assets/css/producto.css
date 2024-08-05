@@ -1,0 +1,95 @@
+/*===== SECTION =====*/
+.l-section4 {
+    background: url('../img/Carrusel_Negro\ estrellas.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+    position: relative;
+    overflow: hidden; /* Asegura que no haya scroll */
+    background-attachment: fixed; /* Aquí se aplica el efecto parallax */
+}
+
+.l-section4::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px; /* Ajusta la altura de la sombra según sea necesario */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.589), rgba(0, 0, 0, 0));
+    z-index: 102; /* Asegúrate de que esté encima del fondo de la imagen */
+    pointer-events: none; /* Para que no interfiera con otros elementos */
+}
+
+.products-section h2 {
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: #00f;
+}
+
+.products-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.product {
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 420px;
+    text-align: left;
+}
+
+.product img {
+    width: 250px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    display: block; /* Asegura que el margen auto funcione */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+
+.product p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-text {
+    margin-top: 30px;
+    font-size: 16px;
+}
+
+.footer-text a {
+    color: #00f;
+    text-decoration: none;
+}
+
+.footer-text a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 767px) {
+    .l-section4 {
+        padding: 40px 10px; /* Ajustar el padding para pantallas pequeñas */
+        background-attachment: scroll; /* Desactivar el efecto parallax en móviles para mejor rendimiento */
+    }
+
+    .products-container {
+        flex-direction: column; /* Ordenar los productos verticalmente */
+        align-items: center; /* Centrar los elementos */
+    }
+
+    .product {
+        max-width: 100%; /* Asegurarse de que los productos ocupen el ancho completo en móviles */
+        margin-bottom: 20px; /* Espacio entre los productos */
+    }
+
+    .products-section h2 {
+        font-size: 20px; /* Ajustar el tamaño de la fuente del título */
+    }
+
+    .footer-text {
+        font-size: 14px; /* Ajustar el tamaño de la fuente del texto de pie de página */
+    }
+}

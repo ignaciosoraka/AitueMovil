@@ -1,0 +1,748 @@
+/*===== GOGGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+/*===== VARIABLES SCSS =====*/
+/*===== VARIABLES CSS =====*/
+/*=== Colores ===*/
+:root {
+  --first-color: #0396A6;
+  --dark-color: #000;
+  --white-color: #F2F2F2;
+}
+
+/*=== Fuente y tipografia ===*/
+:root {
+ 
+  --biggest-font-size: 3.5rem;
+  --h2-font-size: 0.9rem;
+  --normal-font-size: 0.938rem;
+}
+@font-face {
+  font-family: Sansation_Regular;
+  src: url(Sansation_Regular.ttf);
+}
+
+
+/*=== z index ===*/
+:root {
+  --z-back: -10;
+  --z-normal: 1;
+  --z-tooltip: 10;
+  --z-fixed: 98;
+  --z-modal: 1000;
+}
+
+/*===== BASE =====*/
+*, ::before, ::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.curve {
+  height: 4px; /* Altura de la curva */
+  background: #ffffff; /* Color de la curva */
+  position: absolute;
+  bottom: 0px; /* Ajusta según necesites para colocar la curva */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30%; /* Ajusta el ancho de la curva según necesites */
+  border-radius: 0 0 100% 100% / 0 0 10px 10px; /* Curva en la parte inferior */
+  z-index: -1; /* Para que la curva quede detrás del contenido */
+}
+
+
+/* Background colors for sections */
+.l-section {
+  
+  color: #fff;
+}
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+html, body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* Asegurarse de que ningún elemento se desborde */
+* {
+  box-sizing: border-box;
+} 
+body {
+  margin: 0;
+  font-family: Sansation_Regular;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*===== LAYOUT =====*/
+.bd-grid {
+  max-width: 1200px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.nav__logo img {
+  height: 100px; /* Ajusta según el tamaño deseado del logo */
+  margin-top: 25px;
+}
+
+.l-header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  z-index: var(--z-modal);
+}
+
+/*===== NAVBAR =====*/
+.nav {
+  height: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: bold;
+}
+.nav__menu{
+  width: 66%;
+}
+@media screen and (max-width: 768px) {
+  .nav__menu {
+    position: fixed;
+    left: 0%;
+    top: -100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    height: 40%;
+    padding: 2rem;
+    text-align: center;
+    z-index: var(--z-fixed);
+    -webkit-transition: .3s;
+    transition: .3s;
+  }
+  .nav__logo img {
+    height: 50px; /* Ajusta según el tamaño deseado del logo */
+    margin-top: 10px;
+  }
+}
+
+.nav__logo {
+  color: var(--white-color);
+}
+
+.nav__item {
+  margin-bottom: 2rem;
+}
+
+.nav__link {
+  color: var(--white-color);
+}
+
+.nav__toggle {
+  font-size: 1.5rem;
+  color: var(--white-color);
+  cursor: pointer;
+}
+
+/*=== Show menu ===*/
+.show {
+  top: 3rem;
+}
+
+/*===== HOME =====*/
+.home {
+  position: relative;
+  height: 100vh; /* Asegúrate de que ocupe toda la vista para centrar verticalmente */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.home__parallax {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+.home__parallax-img1 {
+  
+  background-image: url("/assets/img/Fondo\ 00\ \(1\).jpg");
+  z-index: var(--z-normal);
+}
+
+
+
+  
+
+  
+.home__parallax-img2 {
+  background-image: url("/assets/img/Planeta\ 00\ \(1\).png");
+  z-index: var(--z-tooltip);
+}
+
+.home__parallax-img3 {
+  background-image: url("/assets/img/Satelite\ 00.png");
+  z-index: var(--z-fixed);
+}
+
+.home__parallax-img4 {
+  background-image: url("/assets/img/Luna\ 00.png");
+  z-index: var(--z-fixed);
+}
+
+.home__title{
+  position: absolute;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: var(--white-color);
+}
+
+.home__title {
+  top:15%;
+  font-size:50px;
+  z-index: var(--z-normal);
+}
+
+/* Estilos para el texto pequeño encima del título */
+.home__tagline {
+  top:80%;
+  font-size: 1.2rem; /* Tamaño de fuente pequeño */
+  margin-bottom: 10px; /* Espacio entre el tagline y el título */
+  color: #fffdfd; /* Color del texto */
+ 
+}
+
+.home__scroll {
+  position: absolute;
+  bottom: 4.5rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.5rem;
+  z-index: var(--z-modal);
+}
+
+.home__scroll .bx-mouse {
+  color: var(--white-color);
+}
+/* Estilos para los botones en el centro del header */
+/* Estilos para el contenedor de imágenes de botones */
+.header-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+  z-index: 1000;
+}
+
+/* Estilos para las imágenes de los botones */
+.header-button {
+  position: relative;
+  display: inline-block;
+}
+
+
+@media (max-width:786px){
+  .button-img {
+ 
+    width: 100px;
+}}
+.button-img.hover {
+  display: none;
+}
+
+.header-button:hover .button-img.default {
+  display: none;
+}
+
+.header-button:hover .button-img.hover {
+  display: block;
+}
+
+
+/* Estilos para el icono del mouse */
+.home__scroll img {
+  width: 32px;
+  height: auto;
+}
+/*===== SECTION =====*/
+section {
+  position: relative;
+  padding: 60px;
+  text-align: center;
+  
+}
+
+.section__data {
+  position: relative;
+  z-index: 1;
+  color: white; /* Ensure text is readable on background */
+}
+
+.section__title {
+  font-size: 2em;
+}
+
+.section__text {
+  font-size: 1em;
+  margin-top: 10px;
+}
+
+.curved-bottom {
+  clip-path: ellipse(150% 100% at 50% 100%);
+  background-color: rgb(255, 255, 255); /* Fallback color */
+  box-shadow: 0 -80px 20px -80px rgba(255, 255, 255, 0.9); /* Add white shadow */
+
+  z-index: 99;
+}
+
+@media (max-width:786px){
+  .curved-bottom {
+    padding: 20px;
+    
+    
+    clip-path: ellipse(200% 100% at 50% 100%);
+}}
+
+
+
+
+
+/*===== SECTION =====*/
+.l-section2 {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.466), rgba(0, 0, 0, 0.144)), url('../img/Espacio v1.jpg'); /* Gradiente negro en la parte superior */
+  margin-top: -100px;
+  z-index: 101;
+ padding-block: 1rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh; /* Asegura que la sección cubra toda la altura de la ventana */
+  background-attachment: fixed; /* Aquí se aplica el efecto parallax */
+  
+}
+.l-section2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100px; /* Ajusta la altura de la sombra según sea necesario */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.589), rgba(0, 0, 0, 0));
+  z-index: 102; /* Asegúrate de que esté encima del fondo de la imagen */
+  pointer-events: none; /* Para que no interfiera con otros elementos */
+}
+
+.section {
+  height: 100vh;
+  max-width: 950px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding: 2rem 0;
+  color: var(--white-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section__data {
+  margin-bottom: 3rem;
+}
+
+.section__title {
+  font-size: var(--h2-font-size);
+  color: var(--first-color);
+  margin-bottom: 1rem;
+}
+
+.section__img {
+  width: 285px;
+  border-radius: .5rem;
+}
+
+/*===== MEDIA QUERIES =====*/
+@media screen and (min-width: 760px) {
+  .nav {
+    height: 4rem;
+  }
+  .nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .nav__item {
+    margin-right: 3rem;
+    margin-bottom: 0;
+  }
+  .nav__toggle {
+    display: none;
+  }
+  .home__title {
+    top: 10%;
+    font-size: 120px;
+  }
+  .home__tagline{
+    top: 50%;
+  }
+
+  .section {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .section__text {
+    padding-right: 4rem;
+  }
+  .section__img {
+    width: 470px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .bd-grid {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+/*=============== CARD ===============*/
+
+
+
+
+
+
+/*=============== CARD ===============*/
+.l-section {
+  position: relative;
+  padding-block: 8rem;
+  display: grid;
+  place-items: center;
+
+
+ 
+}
+
+
+
+.title-container {
+  
+  position: absolute;
+  top: 5px;  /* Ajusta según necesites */
+  left: 50%;
+  transform: translateX(-50%);
+
+  text-align: center;
+  width: 100%;  /* Asegura que el contenedor ocupe todo el ancho */
+  padding-top: 2rem;
+}
+
+.section-title {
+  font-size: 7em;
+  color: transparent;
+  background-image: url('../img/Espacio\ v1.jpg');  /* Reemplaza con la ruta de tu imagen */
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-size: cover;
+}
+
+.card__container {
+  display: grid;
+  row-gap: 3.5rem;
+}
+
+.card__article {
+  position: relative;
+  /*overflow: hidden;*/
+  cursor: pointer;
+}
+
+
+.card__data {
+  width: 320px;
+  background-image: url(../img/Espacio\ v2.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 1.5rem 2rem;
+
+  border-radius: 1.5rem;
+  position: absolute;
+  text-align: left;
+  bottom: -5rem;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  opacity: 0;
+  transition: opacity 1s 1s;
+}
+
+
+/*formato con imagenes*/
+/* Estilos para el contenedor del artículo */
+.card__article {
+  position: relative;
+}
+
+/* Estilos para el contenedor de las imágenes */
+.card__img-wrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+/* Estilos para las imágenes por defecto */
+.card__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: opacity 0.5s ease-in-out; /* Transición suave */
+}
+
+/* Estilos para la imagen de hover */
+.hover-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.card__img-wrapper:hover .default-img {
+  opacity: 0;
+}
+
+.card__img-wrapper:hover .hover-img {
+  opacity: 1;
+}
+
+
+.card__title {
+  margin-left: 0px;
+  font-size: var(--h2-font-size);
+  font-weight: 800;
+  font-weight: bold;
+  color: white;
+  margin-bottom: .75rem;
+}
+
+.parrafo{
+  font-size: 13px;
+}
+
+.card__button:hover {
+  text-decoration: underline;
+}
+
+/* Naming animations in hover */
+.card__article:hover .card__data {
+  animation: show-data 1s forwards;
+  opacity: 1;
+
+  transition: opacity .5s;
+}
+
+.card__article:hover {
+  animation: remove-overflow 2s forwards;
+}
+
+.card__article:not(:hover) {
+  animation: show-overflow 2s forwards;
+}
+
+.card__article:not(:hover) .card__data {
+  animation: remove-data 1s forwards;
+}
+.button-container {
+  margin-top: 50px;
+  left: 50%;
+  
+  z-index: 10;
+  text-align: center;
+}
+
+.button-container img{
+  width: 250px;
+}
+
+/* Estilos para el contenedor del botón */
+.button-container {
+  text-align: center; /* Centra el botón en el contenedor */
+}
+
+/* Estilos para el enlace que actúa como botón */
+.superposed-button {
+  position: relative;
+  display: inline-block;
+  text-decoration: none; /* Elimina el subrayado del enlace */
+}
+
+/* Estilos para las imágenes del botón */
+.button-img {
+  display: block;
+  margin-top: 100px;
+  width: 200px;
+  height: auto;
+}
+
+.button-img.hover {
+  display: none;
+}
+
+.superposed-button:hover .button-img.default {
+  display: none;
+}
+
+.superposed-button:hover .button-img.hover {
+  display: block;
+}
+
+/* Card animation */
+@keyframes show-data {
+  50% {
+    transform: translateY(-10rem);
+  }
+  100% {
+    transform: translateY(-7rem);
+  }
+}
+
+@keyframes remove-overflow {
+  to {
+    overflow: initial;
+  }
+}
+
+@keyframes remove-data {
+  0% {
+    transform: translateY(-7rem);
+  }
+  50% {
+    transform: translateY(-10rem);
+  }
+  100% {
+    transform: translateY(.5rem);
+  }
+}
+
+@keyframes show-overflow {
+  0% {
+    overflow: initial;
+    pointer-events: none;
+  }
+  50% {
+    overflow: hidden;
+  }
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 340px) {
+  .container {
+    margin-inline: 1rem;
+  }
+
+  
+}
+
+@media screen and (max-width: 748px) {
+  .section-title{
+    font-size: 2em;
+  }
+}
+
+
+/* For medium devices */
+@media screen and (min-width: 768px) {
+  .card__container {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.5rem;
+  }
+  
+}
+/* For medium devices */
+@media screen and (max-width: 768px) {
+  .card__img {
+    width: 300px;
+  }
+  .card__data {
+    width: 250px;
+    padding: 1rem;
+  }
+}
+
+
+/* For large devices */
+@media screen and (min-width: 1120px) {
+  .container {
+    height: 40vh;
+  }
+
+  .card__container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .card__img {
+    width: 328px;
+  }
+  .card__data {
+    width: 226px;
+    padding-inline: 1rem;
+  }
+}
