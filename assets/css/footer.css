@@ -6,6 +6,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
+    z-index: 1500;
 }
 
 footer::before {

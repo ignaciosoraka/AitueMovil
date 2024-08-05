@@ -186,6 +186,7 @@ img {
   align-items: center;
   text-align: center;
   color: white;
+  overflow: hidden; /* Evita que el contenido desborde */
 }
 
 .home__parallax {
@@ -195,6 +196,7 @@ img {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  transition: transform 0.5s ease; /* Transición para suavizar el movimiento */
 }
 
 
@@ -240,7 +242,19 @@ img {
 .home__title {
   top:15%;
   font-size:50px;
-  z-index: var(--z-normal);
+ 
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 768px) {
+  .home__parallax {
+    background-attachment: scroll; /* Alternativa a fixed */
+    background-size: auto; /* Ajustar tamaño de fondo */
+  }
+
+  .home__title {
+    font-size: 30px; /* Ajustar tamaño de fuente */
+  }
 }
 
 /* Estilos para el texto pequeño encima del título */
