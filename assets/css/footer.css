@@ -66,6 +66,14 @@ footer::before {
     transition: fill 0.3s;
     /* Añade una transición suave al cambiar el color */
   }
+
+  @media (max-width:786px){
+    .footer-social .social-icon svg{
+      width: 20px;
+      /* Ajusta el tamaño de los iconos según sea necesario */
+      height: 20px;
+    }
+  }
   
   .footer-social .social-icon:hover svg {
     fill: #007bff;

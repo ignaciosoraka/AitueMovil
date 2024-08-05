@@ -203,27 +203,23 @@ img {
 
 .home__parallax-img1 {
   
-  background-image: url("/assets/img/Fondo\ 00\ \(1\).jpg");
+  background-image: url("../img/Fondo\ 00\ \(1\).jpg");
   z-index: var(--z-normal);
 }
 
-
-
-  
-
   
 .home__parallax-img2 {
-  background-image: url("/assets/img/Planeta\ 00\ \(1\).png");
+  background-image: url("../img/Planeta\ 00\ \(1\).png");
   z-index: var(--z-tooltip);
 }
 
 .home__parallax-img3 {
-  background-image: url("/assets/img/Satelite\ 00.png");
+  background-image: url("../img/Satelite\ 00.png");
   z-index: var(--z-fixed);
 }
 
 .home__parallax-img4 {
-  background-image: url("/assets/img/Luna\ 00.png");
+  background-image: url("../img/Luna\ 00.png");
   z-index: var(--z-fixed);
 }
 
@@ -245,17 +241,7 @@ img {
  
 }
 
-/* Ajustes para dispositivos móviles */
-@media (max-width: 768px) {
-  .home__parallax {
-    background-attachment: scroll; /* Alternativa a fixed */
-    background-size: auto; /* Ajustar tamaño de fondo */
-  }
 
-  .home__title {
-    font-size: 30px; /* Ajustar tamaño de fuente */
-  }
-}
 
 /* Estilos para el texto pequeño encima del título */
 .home__tagline {
