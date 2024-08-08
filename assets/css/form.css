@@ -5,7 +5,7 @@
     padding: 80px;
     padding-top: 200px;
     padding-left: 120px;
-    background-image: url(../img/Fondo\ contacto.png); /* Gradiente negro en la parte superior */
+    background-image: url(../img/Contacto.jpg); /* Gradiente negro en la parte superior */
     margin-top: -100px;
     z-index: 101;
     color: #ffffff;
@@ -138,7 +138,8 @@
     }
 
     .curved-bottom {
-        clip-path: ellipse(200% 100% at 50% 100%);
+        clip-path: ellipse(250% 100% at 50% 100%);
+           margin-top: -70px; /* Adjust as needed */
     }
 
     .left-content, 
@@ -159,7 +160,7 @@
 
     .primary-button {
         width: 100%;
-        padding: 10px 0;
+        padding: 10px 20px;
     }
 }
 
@@ -195,5 +196,11 @@
 
     .right-content h1, .right-content .small-text, .right-content hr {
         width: 100%;
+        
+    }
+
+    .footer-copyright{
+        font-size: 13px;
+        text-align: center;
     }
 }

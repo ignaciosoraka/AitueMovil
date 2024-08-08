@@ -34,7 +34,11 @@ html {
 
     .testimonial-section {
         margin-bottom: -30px;
-        height: 60vh;
+        height: 40vh;
+    }
+
+    .l-section2{
+        height: 80vh;
     }
 }
 
@@ -328,7 +332,7 @@ a {
     .card2s .image img {
         width: 100%;
         /* Ocupa todo el ancho disponible */
-        height: 150px;
+        height: 200px;
         /* Ajuste de altura proporcional */
     }
 
@@ -462,8 +466,8 @@ a {
 }
 
 .carousel-inner .card2 .infos {
-    background-color: rgba(51, 51, 51, 0.9); /* Fondo semi-transparente */
-    border: 3px solid rgba(0, 68, 204, 0.9); /* Borde original */
+    background-color: rgb(51, 51, 51); /* Fondo semi-transparente */
+    border: 3px solid rgba(58, 112, 221, 0.9); /* Borde original */
     border-radius: 30px; /* Bordes redondeados */
     width: 700px; /* Ancho del elemento */
     padding: 20px; /* Espaciado interno */
@@ -524,7 +528,7 @@ a {
 
 /* Imagen de encendido que se mostrará al pasar el mouse */
 .superposed-button2:hover .button-image {
-    content: url('../img/Boton\ -\ Venta\ de\ equipos\ Encendido.png'); /* Cambia la imagen en hover */
+    content: url('../img/Boton_\ Tienda\ virtual\ Apagado.png'); /* Cambia la imagen en hover */
 }
 .superposed-button2 {
     position: absolute;
@@ -547,6 +551,8 @@ a {
 
 @media (max-width:786px) {
     .superposed-button2 {
-        bottom: -260px;
+        width: 100%; /* Ajusta el ancho según necesites */
+        max-width: 180px; 
+        bottom: -270px;
     }
 }

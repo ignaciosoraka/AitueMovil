@@ -1,3 +1,23 @@
+let startX, currentX;
+const threshold = 50; // Distancia mínima en píxeles para considerar un deslizamiento
+const carouselInner = document.querySelector('.carousel-inner');
+
+function handleTouchStart(event) {
+    startX = event.touches[0].clientX;
+}
+
+function handleTouchMove(event) {
+    currentX = event.touches[0].clientX;
+}
+
+function handleTouchEnd() {
+    if (startX - currentX > threshold) {
+        nextSlide();
+    } else if (currentX - startX > threshold) {
+        prevSlide();
+    }
+}
+
 function prevSlide() {
     let currentSlide = document.querySelector('input[name="slider"]:checked');
     let prevSlide = currentSlide.previousElementSibling;
@@ -19,12 +39,10 @@ function nextSlide() {
 }
 
 function updateInfos() {
-    // Ocultar todas las secciones de información
     document.querySelectorAll('.infos').forEach(info => {
         info.classList.remove('active');
     });
-    
-    // Mostrar la sección de información correspondiente al slide seleccionado
+
     let currentSlide = document.querySelector('input[name="slider"]:checked');
     let slideId = currentSlide.id;
     let infoToShow = document.querySelector(`label[for="${slideId}"] .infos`);
@@ -33,10 +51,12 @@ function updateInfos() {
     }
 }
 
-// Inicializar la visualización correcta al cargar la página
 document.addEventListener('DOMContentLoaded', updateInfos);
-
-// También actualiza las informaciones cuando se cambia la selección del slider manualmente
 document.querySelectorAll('input[name="slider"]').forEach(radio => {
     radio.addEventListener('change', updateInfos);
 });
+
+// Agregar eventos táctiles
+carouselInner.addEventListener('touchstart', handleTouchStart, false);
+carouselInner.addEventListener('touchmove', handleTouchMove, false);
+carouselInner.addEventListener('touchend', handleTouchEnd, false);

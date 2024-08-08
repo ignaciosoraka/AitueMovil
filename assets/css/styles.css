@@ -352,19 +352,29 @@ section {
 
 
 
-/*===== SECTION =====*/
+/* Estilos para dispositivos de escritorio */
 .l-section2 {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.466), rgba(0, 0, 0, 0.144)), url('../img/Espacio v1.jpg'); /* Gradiente negro en la parte superior */
   margin-top: -100px;
   z-index: 101;
- padding-block: 1rem;
+  padding-block: 1rem;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh; /* Asegura que la sección cubra toda la altura de la ventana */
   background-attachment: fixed; /* Aquí se aplica el efecto parallax */
-  
 }
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 768px) {
+  .l-section2 {
+    background-attachment: scroll; /* Desactiva el efecto parallax */
+   
+   
+  }
+}
+
+/* Estilo para el pseudo-elemento en todas las pantallas */
 .l-section2::before {
   content: "";
   position: absolute;
@@ -481,15 +491,11 @@ section {
  
 }
 
-
-
 .title-container {
-  
   position: absolute;
   top: 5px;  /* Ajusta según necesites */
   left: 50%;
   transform: translateX(-50%);
-
   text-align: center;
   width: 100%;  /* Asegura que el contenedor ocupe todo el ancho */
   padding-top: 2rem;
@@ -511,10 +517,8 @@ section {
 
 .card__article {
   position: relative;
-  /*overflow: hidden;*/
   cursor: pointer;
 }
-
 
 .card__data {
   width: 320px;
@@ -523,7 +527,6 @@ section {
   background-position: center;
   background-repeat: no-repeat;
   padding: 1.5rem 2rem;
-
   border-radius: 1.5rem;
   position: absolute;
   text-align: left;
@@ -534,7 +537,6 @@ section {
   opacity: 0;
   transition: opacity 1s 1s;
 }
-
 
 /*formato con imagenes*/
 /* Estilos para el contenedor del artículo */
@@ -573,7 +575,6 @@ section {
   opacity: 1;
 }
 
-
 .card__title {
   margin-left: 0px;
   font-size: var(--h2-font-size);
@@ -583,7 +584,7 @@ section {
   margin-bottom: .75rem;
 }
 
-.parrafo{
+.parrafo {
   font-size: 13px;
 }
 
@@ -595,7 +596,6 @@ section {
 .card__article:hover .card__data {
   animation: show-data 1s forwards;
   opacity: 1;
-
   transition: opacity .5s;
 }
 
@@ -610,17 +610,39 @@ section {
 .card__article:not(:hover) .card__data {
   animation: remove-data 1s forwards;
 }
+
 .button-container {
   margin-top: 50px;
   left: 50%;
-  
   z-index: 10;
   text-align: center;
 }
 
-.button-container img{
+.button-container img {
   width: 250px;
 }
+
+/* Estilos para la versión móvil */
+@media (max-width: 768px) {
+  .default-img {
+    display: none;
+  }
+
+  .hover-img {
+    display: block;
+    position: relative;
+    opacity: 1;
+  }
+
+  .card__img-wrapper:hover .default-img {
+    opacity: 1; /* No hacer nada en hover para versión móvil */
+  }
+
+  .card__img-wrapper:hover .hover-img {
+    opacity: 1; /* No hacer nada en hover para versión móvil */
+  }
+}
+
 
 /* Estilos para el contenedor del botón */
 .button-container {
@@ -641,7 +663,13 @@ section {
   width: 200px;
   height: auto;
 }
-
+@media (max-width:786px){
+  .button-img {
+  
+    margin-top: 10px;
+   
+  }
+}
 .button-img.hover {
   display: none;
 }
@@ -721,6 +749,7 @@ section {
 @media screen and (max-width: 768px) {
   .card__img {
     width: 300px;
+  
   }
   .card__data {
     width: 250px;
