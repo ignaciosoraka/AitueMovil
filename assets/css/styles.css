@@ -288,7 +288,7 @@ img {
 
 @media (max-width:786px){
   .button-img {
- 
+ margin-left: 10px;
     width: 100px;
 }}
 .button-img.hover {
@@ -332,13 +332,7 @@ section {
   margin-top: 10px;
 }
 
-.curved-bottom {
-  clip-path: ellipse(150% 100% at 50% 100%);
-  background-color: rgb(255, 255, 255); /* Fallback color */
-  box-shadow: 0 -80px 20px -80px rgba(255, 255, 255, 0.9); /* Add white shadow */
 
-  z-index: 99;
-}
 
 @media (max-width:786px){
   .curved-bottom {
@@ -424,6 +418,12 @@ section {
   border-radius: .5rem;
 }
 
+@media screen and (max-width: 760px) {
+  .home__title {
+  top: 29%;
+ 
+}}
+
 /*===== MEDIA QUERIES =====*/
 @media screen and (min-width: 760px) {
   .nav {
@@ -493,7 +493,7 @@ section {
 
 .title-container {
   position: absolute;
-  top: 5px;  /* Ajusta según necesites */
+  top: 25px;  /* Ajusta según necesites */
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
@@ -502,12 +502,11 @@ section {
 }
 
 .section-title {
-  font-size: 7em;
-  color: transparent;
-  background-image: url('../img/Espacio\ v1.jpg');  /* Reemplaza con la ruta de tu imagen */
-  background-clip: text;
+  font-size: 5em;
+  background: linear-gradient(90deg, #ffffff, #a8b8ec, #000080); /* Degradado de blanco a azul */
   -webkit-background-clip: text;
-  background-size: cover;
+  color: transparent;
+  text-align: center;
 }
 
 .card__container {
@@ -611,16 +610,7 @@ section {
   animation: remove-data 1s forwards;
 }
 
-.button-container {
-  margin-top: 50px;
-  left: 50%;
-  z-index: 10;
-  text-align: center;
-}
 
-.button-container img {
-  width: 250px;
-}
 
 /* Estilos para la versión móvil */
 @media (max-width: 768px) {
@@ -643,10 +633,16 @@ section {
   }
 }
 
-
-/* Estilos para el contenedor del botón */
 .button-container {
-  text-align: center; /* Centra el botón en el contenedor */
+  margin-top: 50px;
+  left: 50%;
+  z-index: 10;
+  text-align: center;
+}
+
+.button-container img {
+  
+  width: 250px;
 }
 
 /* Estilos para el enlace que actúa como botón */
@@ -682,43 +678,7 @@ section {
   display: block;
 }
 
-/* Card animation */
-@keyframes show-data {
-  50% {
-    transform: translateY(-10rem);
-  }
-  100% {
-    transform: translateY(-7rem);
-  }
-}
 
-@keyframes remove-overflow {
-  to {
-    overflow: initial;
-  }
-}
-
-@keyframes remove-data {
-  0% {
-    transform: translateY(-7rem);
-  }
-  50% {
-    transform: translateY(-10rem);
-  }
-  100% {
-    transform: translateY(.5rem);
-  }
-}
-
-@keyframes show-overflow {
-  0% {
-    overflow: initial;
-    pointer-events: none;
-  }
-  50% {
-    overflow: hidden;
-  }
-}
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
