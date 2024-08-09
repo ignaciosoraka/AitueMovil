@@ -8,7 +8,7 @@ html {
 
 .section-title2 {
     position: absolute;
-    top: 80px;
+    top: 30px;
     left: 50%;
     transform: translateX(-50%);
 
@@ -113,9 +113,9 @@ a {
 
     z-index: 2;
     border-radius: 5px;
-    width: 80%;
+
     margin: 0 auto;
-    height: 350px;
+    height: 280px;
     object-fit: cover;
     transition: all 0.7s;
     margin-right: 50px;
@@ -471,7 +471,7 @@ a {
     border-radius: 30px; /* Bordes redondeados */
     width: 700px; /* Ancho del elemento */
     padding: 20px; /* Espaciado interno */
-    margin-top: -100px; /* Desplazamiento hacia arriba */
+    margin-top: -70px; /* Desplazamiento hacia arriba */
     
     /* Agrega un resplandor usando box-shadow */
     box-shadow: 
@@ -532,7 +532,7 @@ a {
 }
 .superposed-button2 {
     position: absolute;
-    bottom: -75px;
+    bottom: -100px;
     /* Ajusta según sea necesario para que esté 50% dentro y 50% fuera */
     left: 50%;
     transform: translateX(-50%);
