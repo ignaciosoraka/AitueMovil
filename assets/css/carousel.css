@@ -330,7 +330,7 @@ a {
     }
 
     .card2s .image img {
-        width: 100%;
+        width: 150px;
         /* Ocupa todo el ancho disponible */
         height: 200px;
         /* Ajuste de altura proporcional */
@@ -482,8 +482,8 @@ a {
 
 @media (max-width:786px) {
     .carousel-inner .card2 .infos {
-        margin-top: -20px;
-        width: 250px;
+        margin-top: -50px;
+        width: 330px;
     }
     .carousel-control.prev {
         left: 30px;
@@ -511,7 +511,7 @@ a {
     }
 
     .card2 .lorem {
-        width:200px;
+        width:260px;
         margin-bottom: 10px; /* Añade espacio entre los párrafos */
     }
 }
@@ -532,7 +532,7 @@ a {
 }
 .superposed-button2 {
     position: absolute;
-    bottom: -100px;
+    bottom: -120px;
     /* Ajusta según sea necesario para que esté 50% dentro y 50% fuera */
     left: 50%;
     transform: translateX(-50%);
@@ -553,6 +553,6 @@ a {
     .superposed-button2 {
         width: 100%; /* Ajusta el ancho según necesites */
         max-width: 180px; 
-        bottom: -270px;
+        bottom: -250px;
     }
 }
